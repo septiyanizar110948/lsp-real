@@ -4,7 +4,7 @@
 
         <h1>Dashboard</h1>
 
-        <hr></hr>
+        <hr>
 
         <li class="nav-item">
             <a class="nav-link " href="{{ route('peserta.index') }}">
@@ -20,7 +20,7 @@
 
         <li class="nav-item">
             <a class="nav-link " href="{{ route('logout') }}">
-                <span>logut</span>
+                <span>logout</span>
             </a>
         </li><!-- End Dashboard Nav -->
     </ul>

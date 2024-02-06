@@ -12,8 +12,6 @@
 <body style="display:flex; align-items:center; justify-content:center;">
     <div class="login-page">
         <div class="log-form">
-            <h2>Welcom Back</h2>
-
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>

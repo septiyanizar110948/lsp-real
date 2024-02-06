@@ -92,15 +92,25 @@ class PesertaController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     */public function destroy(string $id)
-{
-    $peserta = Peserta::findOrFail($id);
+     */
+    public function destroy(string $id)
+    {
+        $peserta = Peserta::findOrFail($id);
 
-    $peserta->forceDelete();
+        $peserta->forceDelete();
 
-    // If you want to permanently delete the record, you can use the forceDelete method:
-    // $peserta->forceDelete();
+        // If you want to permanently delete the record, you can use the forceDelete method:
+        // $peserta->forceDelete();
 
-    return redirect()->route('peserta.index')->with('success', 'Peserta deleted successfully');
-}
+        return redirect()->route('peserta.index')->with('success', 'Peserta deleted successfully');
+    }
+
+    public function search(Request $request)
+    {
+        $nama_peserta = $request->input('nama_peserta');
+
+        $results = Peserta::where('nama', 'like', '%' . $nama_peserta . '%')->get();
+
+        return view('welcome', compact('results'));
+    }
 }

@@ -41,3 +41,4 @@ Route::put('/sertifikat/{sertifikat}', 'SertifikatController@update')->name('ser
 
 
 Route::resource('peserta', PesertaController::class);
+Route::get('/search', [PesertaController::class, 'search'])->name('search');
