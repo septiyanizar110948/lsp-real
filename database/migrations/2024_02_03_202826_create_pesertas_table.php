@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->uuid('no_sertifik');
             $table->string('tema_pelatihan');
+            $table->string('nilai_sertifikat')->nullable(); // Menambahkan kolom untuk nilai sertifikat
             $table->timestamps();
         });
     }

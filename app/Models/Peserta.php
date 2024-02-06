@@ -11,6 +11,7 @@ class Peserta extends Model
 
     protected $fillable = [
         'nama',
+        'nilai_sertifikat',
         'no_sertifik',
         'tema_pelatihan',
     ];

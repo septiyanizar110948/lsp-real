@@ -23,6 +23,7 @@
                 <th>Nama</th>
                 <th>No. Sertifikat</th>
                 <th>Tema Pelatihan</th>
+                <th>Tema serti</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                 <td>{{ $peserta->nama }}</td>
                 <td>{{ $peserta->no_sertifik }}</td>
                 <td>{{ $peserta->tema_pelatihan }}</td>
+                <td>{{ $peserta->nilai_sertifikat    }}</td>
                 <td class="d-flex">
                     <a href="{{ route('peserta.show', $peserta->id) }}" class="btn btn-primary me-2">
                         <i class="ri-printer-fill"></i>

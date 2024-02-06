@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('sertifikats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('peserta_id')->constrained('pesertas')->onDelete('cascade');
             $table->string('company');
             $table->string('kepsek');
             $table->string('kaprok');

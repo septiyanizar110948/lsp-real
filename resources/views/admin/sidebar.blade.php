@@ -13,8 +13,8 @@
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('sertifikat.create') }}">
-                <span>sertifikasi</span>
+            <a class="nav-link" href="{{ route('sertifikat.edit', ['sertifikat' => 1]) }}">
+            <span>sertifikasi</span>
             </a>
         </li><!-- End Dashboard Nav -->
 

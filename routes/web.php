@@ -35,7 +35,9 @@ Route::post('login/login', [AuthController::class, 'login'])->name('login.login'
 Route::get('login/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('login/logout', [AuthController::class, 'logout']);
 
-Route::resource('sertifikat', SertifikatController::class);
+Route::post('sertifikat', [SertifikatController::class, 'store'])->name('sertifikat.store');
+Route::resource('sertifikat', SertifikatController::class)->except(['store']);
+Route::put('/sertifikat/{sertifikat}', 'SertifikatController@update')->name('sertifikat.update');
 
 
 Route::resource('peserta', PesertaController::class);

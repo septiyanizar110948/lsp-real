@@ -30,9 +30,11 @@ class PesertaController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         $request->validate([
             'nama' => 'required',
             'tema_pelatihan' => 'required',
+            'nilai_sertifikat' => 'required', // Validate the nilai_sertifikat field
         ]);
 
         $no = str_pad(rand(1, 9999999), 7, '0', STR_PAD_LEFT);
@@ -41,10 +43,10 @@ class PesertaController extends Controller
             'no_sertifik' => $no,
             'nama' => $request->nama,
             'tema_pelatihan' => $request->tema_pelatihan,
+            'nilai_sertifikat' => $request->nilai_sertifikat, // Save nilai_sertifikat to database
         ]);
 
-        return to_route('peserta.index')->with('success');
-
+        return redirect()->route('peserta.index')->with('success', 'Peserta created successfully');
     }
 
     /**

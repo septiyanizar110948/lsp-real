@@ -43,10 +43,9 @@
         .custom-image-radio-label:hover {
             border-color: #1e3a8a;
         }
-
-
     </style>
 @endsection
+
 <div class="pagetitle">
     <h1>Tambah Peserta</h1>
     <nav>
@@ -57,7 +56,6 @@
         </ol>
     </nav>
 </div><!-- End Page Title -->
-
 
 <div class="card ">
     <div class="card-body">
@@ -103,48 +101,51 @@
                         <div class="col-md-3">
                             <label for="sertifikat-1" class="custom-image-label">
                                 <img class="mb-2 h-56 rounded-lg border-2 border-slate-200 md:w-full"
-                                    src="{{ asset('sertifikat/certi1.png') }}" alt="">
+                                    src="{{ asset('temasertifikat/certi1.png') }}" alt="">
                             </label>
                             <div class="flex items-center rounded border border-gray-200 ps-4">
                                 <input
                                     class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                                    id="sertifikat-1" name="certificate_type" type="radio" value="" checked>
+                                    id="sertifikat-1" name="certificate_type[]" type="radio" value="1" checked>
                                 <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                     for="sertifikat-1">Sertifikat 1</label>
+                                <!-- Tambahkan input tersembunyi untuk nilai sertifikat -->
+                                <input type="hidden" name="nilai_sertifikat" value="1">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label for="sertifikat-2" class="custom-image-label">
                                 <img class="mb-2 h-56 rounded-lg border-2 border-slate-200 md:w-full"
-                                    src="{{ asset('sertifikat/certi2.png') }}" alt="">
+                                    src="{{ asset('temasertifikat/certi2.png') }}" alt="">
                             </label>
                             <div class="flex items-center rounded border border-gray-200 ps-4">
                                 <input
                                     class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                                    id="sertifikat-2" name="certificate_type" type="radio" value="">
+                                    id="sertifikat-2" name="certificate_type[]" type="radio" value="2">
                                 <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                     for="sertifikat-2">Sertifikat 2</label>
+                                <!-- Tambahkan input tersembunyi untuk nilai sertifikat -->
+                                <input type="hidden" name="nilai_sertifikat" value="2">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label for="sertifikat-3" class="custom-image-label">
                                 <img class="mb-2 h-56 rounded-lg border-2 border-slate-200 md:w-full"
-                                    src="{{ asset('sertifikat/certi3.png') }}" alt="">
+                                    src="{{ asset('temasertifikat/certi3.png') }}" alt="">
                             </label>
                             <div class="flex items-center rounded border border-gray-200 ps-4">
                                 <input
                                     class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                                    id="sertifikat-3" name="certificate_type" type="radio" value="">
+                                    id="sertifikat-3" name="certificate_type[]" type="radio" value="3">
                                 <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                     for="sertifikat-3">Sertifikat 3</label>
+                                <!-- Tambahkan input tersembunyi untuk nilai sertifikat -->
+                                <input type="hidden" name="nilai_sertifikat" value="3">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
 
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -153,9 +154,5 @@
         </form><!-- End floating Labels Form -->
     </div>
 </div>
-
-
-
-
 
 @endsection
